@@ -1,0 +1,11 @@
+/home/gic-sok-makara/oslab-work/lab1/task2_files
+bridge.txt
+panda.txt
+bridge.txt
+panda.txt
+panda_copy.txt
+bridge_renamed.txt
+panda.txt
+panda_copy.txt
+bridge_renamed.txt
+panda.txt
