@@ -1,0 +1,18 @@
++------------------------------------------------------------------+
+| USER SPACE                                                       |
+|   bash (shell)                                                   |
+|   file_creator_lib / file_creator_sys                            |
+|   file_reader_lib  / file_reader_sys                             |
+|   dir_list_lib     / dir_list_sys                                |
++------------------------------------------------------------------+
+| SYSTEM CALL INTERFACE                                            |
+|   open()   read()   write()   close()   stat()                   |
++------------------------------------------------------------------+
+| KERNEL                                                           |
+|   Linux 6.18.54.1-microsoft-standard-WSL2                        |
+|   loaded modules: kvm_intel, kvm, irqbypass                      |
++------------------------------------------------------------------+
+| HARDWARE                                                         |
+|   CPU: 13th Gen Intel(R) Core(TM) i7-13650HX                     |
+|   RAM: 7935884 kB (about 7.6 GB)                                 |
++------------------------------------------------------------------+
