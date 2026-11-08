@@ -1,0 +1,20 @@
+    ptr = mmap(0, SIZE, PROT_READ, MAP_SHARED, shm_fd, 0);
+    if (ptr == MAP_FAILED) { perror("mmap"); exit(EXIT_FAILURE); }
+
+    printf("Consumer: reading from shared memory '%s'\n", name);
+    printf("Consumer: message = \"%s\"\n", (char *)ptr);
+
+    if (shm_unlink(name) == -1) { perror("shm_unlink"); exit(EXIT_FAILURE); }
+    printf("Consumer: shared memory unlinked.\n");
+    return 0;
+}
+EOF
+
+  670  ls
+  671  gcc -o shm-producer shm-producer.c -lrt
+  672  gcc -o shm-consumer shm-consumer.c -lrt
+  673  ./shm-consumer 2>&1 | tee error_consumer_first.txt
+  674  ./shm-producer
+  675  ./shm-consumer > result-shm-ipc.txt
+  676  cat result-shm-ipc.txt
+  677  history | tail -n 20 > command_used_shm.txt

@@ -1,0 +1,20 @@
+  647  gcc -o shm-consumer shm-consumer.c -lrt
+  648  cd ~/OS-GIC-e20230987/os-class-activities-e20230987/activity2/task1
+  649  sed -i 's|^\(\s*\)pid = fork();|\1fflush(stdout);\n\1pid = fork();|' forkchild.c
+  650  sed -i 's|^\(\s*\)execlp(|\1fflush(stdout);\n\1execlp(|' forkchild.c
+  651  grep -n "fflush" forkchild.c
+  652  gcc -o forkchild forkchild.c
+  653  rm -f result_forkchild.txt
+  654  ./forkchild > result_forkchild.txt 2>&1 &
+  655  sleep 2
+  656  ps -ef --forest | grep forkchild | grep -v grep
+  657  pstree -p $(pgrep -o forkchild)
+  658  cd ~/OS-GIC-e20230987/os-class-activities-e20230987/activity2/task1
+  659  rm -f result_forkchild.txt
+  660  ./forkchild > result_forkchild.txt 2>&1 &
+  661  P=$!; sleep 2
+  662  ps -ef --forest | grep forkchild | grep -v grep
+  663  pstree -p $P
+  664  wait
+  665  cat result_forkchild.txt
+  666  history | tail -n 20 > command_used_forkchild.txt

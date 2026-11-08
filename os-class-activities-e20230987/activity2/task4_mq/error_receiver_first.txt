@@ -1,0 +1,2 @@
+mq_open: No such file or directory
+Hint: Did you run sender first?
