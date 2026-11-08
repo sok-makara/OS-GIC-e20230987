@@ -1,0 +1,10 @@
+cd /home/gic-sok-makara/oslab-work/lab2/incoming
+mv -- 'cash flow.txt' ../reports/
+mv -- '/home/gic-sok-makara/oslab-work/lab2/incoming/sales north.txt' '/home/gic-sok-makara/oslab-work/lab2/reports/'
+cp -- 'reports/cash flow.txt' 'reports/sales north.txt' TechCorp/Legal/
+cp -- 'reports/cash flow.txt' TechCorp/Legal/archive/first-original.txt
+cat '../Legal/cash flow.txt'
+cat '/home/gic-sok-makara/oslab-work/lab2/TechCorp/Legal/cash flow.txt'
+Decision: for step 3 I used relative paths because the files were close to the lab folder and the commands are short. Absolute paths are better when I run commands from another folder, in scripts, or when the command must work from anywhere.
+Error: cat: 'reports/cash flow.txt': No such file or directory
+Fix: ../../reports/cash flow.txt
