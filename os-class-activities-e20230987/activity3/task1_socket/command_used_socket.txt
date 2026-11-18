@@ -1,0 +1,20 @@
+ 1360  ./threads_mutex > result_threads_mutex.txt 2>&1; cat result_threads_mutex.txt
+ 1361  echo "--- 5 runs without mutex ---"; for i in 1 2 3 4 5; do ./threads | grep Actual; done | tee result_race_runs.txt
+ 1362  sed 's/pthread_join(threads\[i\], NULL);//' threads.c > nojoin.csed 's/pthread_join(threads\[i\], NULL);//' threads.c > nojoin.c
+ 1363  pkill -x server
+ 1364  sleep 1
+ 1365  ss -ltnp | grep 8080 \
+ 1366  ss -ltnp | grep 8080
+ 1367  cd $A/task1_socket
+ 1368  sed -i 's/8080/9090/' server.c client.c
+ 1369  gcc -o server server.c && gcc -o client client.c
+ 1370  A=~/OS-GIC-e20230987/os-class-activities-e20230987/activity3
+ 1371  cd $A/task1_socket
+ 1372  ./client > result_client_before_server.txt 2>&1; cat result_client_before_server.txt
+ 1373  ./server > result_server.txt 2>&1 &
+ 1374  sleep 1
+ 1375  ./client > result_client.txt 2>&1
+ 1376  wait
+ 1377  cat result_server.txt result_client.txt > result_socket.txt
+ 1378  cat result_socket.txt
+ 1379  history | tail -n 20 > command_used_socket.txt

@@ -1,0 +1,5 @@
+Actual counter value:   156421
+Actual counter value:   196969
+Actual counter value:   121282
+Actual counter value:   122815
+Actual counter value:   178870

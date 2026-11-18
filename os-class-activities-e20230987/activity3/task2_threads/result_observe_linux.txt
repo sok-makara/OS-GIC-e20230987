@@ -1,0 +1,34 @@
+gic-sok+ 2606093 2592478 2606093  0    5 10:49 pts/6    00:00:00 ./threads_observe
+gic-sok+ 2606093 2592478 2606095  0    5 10:49 pts/6    00:00:00 ./threads_observe
+gic-sok+ 2606093 2592478 2606096  0    5 10:49 pts/6    00:00:00 ./threads_observe
+gic-sok+ 2606093 2592478 2606097  0    5 10:49 pts/6    00:00:00 ./threads_observe
+gic-sok+ 2606093 2592478 2606098  0    5 10:49 pts/6    00:00:00 ./threads_observe
+gic-sok+ 2606328 2592478 2606328  0    1 10:49 pts/6    00:00:00 grep --color=auto threads_observe
+    PID    SPID TTY          TIME CMD
+2606093 2606093 pts/6    00:00:00 threads_observe
+2606093 2606095 pts/6    00:00:00 threads_observe
+2606093 2606096 pts/6    00:00:00 threads_observe
+2606093 2606097 pts/6    00:00:00 threads_observe
+2606093 2606098 pts/6    00:00:00 threads_observe
+--- /proc/2606093/task/ listing ---
+2606093
+2606095
+2606096
+2606097
+2606098
+    PID     LWP NLWP PSR STAT COMMAND
+    PID    PPID PSR COMMAND
+      3       2   0 pool_workqueue_release
+      4       2   0 kworker/R-rcu_gp
+      5       2   0 kworker/R-sync_wq
+      6       2   0 kworker/R-kvfree_rcu_reclaim
+      7       2   0 kworker/R-slub_flushwq
+      8       2   0 kworker/R-netns
+     10       2   0 kworker/0:0H-kblockd
+     13       2   0 kworker/R-mm_percpu_wq
+     14       2   0 ksoftirqd/0
+     15       2   1 rcu_preempt
+     16       2   0 rcu_exp_par_gp_kthread_worker/0
+     17       2   7 rcu_exp_gp_kthread_worker
+     18       2   0 migration/0
+     19       2   0 kprobe-optimizer
